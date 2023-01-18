@@ -4,30 +4,446 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
     </head>
 
     <body> 
         <div class="header">
-            <img src="FARM TO TABLE.png">
+            <img src="images/FARM TO TABLE.png" class="img-fluid header-image">
         </div>
         <main>
-            <div class="d-flex justify-content-center filters">
+            <div class="d-flex justify-content-center filters my-3">
+
                 <div class="p-2 filter">
-                    <button class="btn filter-button" id="veg">
+                    <button class="btn btn-circle filter-button active" id="combined" onclick="combined()">
+                        <i class="fa-solid fa-egg"></i>
+                    </button>
+                </div>
+
+                <div class="p-2 filter">
+                    <button class="btn btn-circle filter-button" id="veg" onclick="veg()">
                         <i class="fa-solid fa-seedling"></i>
                     </button>
                 </div>
 
                 <div class="p-2 filter">
-                    <button class="btn filter-button" id="non-veg">
+                    <button class="btn btn-circle filter-button" id="non-veg" onclick="non_veg()">
                         <i class="fa-solid fa-drumstick-bite"></i>
                     </button>
                 </div>
+            </div>
+            
+            <div class="container lists d-none" id="mocktails-items">
+                <div class="col-12 menu-header">
+                    
+                </div>
+                
+                <div class="row">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Virgin Mojito
+                        </div>
+                        <div class="i-d">
+                            (mint, lemonade)
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">159</div>
+                    </div>
+                </div>
 
-                <div class="p-2 filter">
-                    <button class="btn filter-button" id="combined">
-                        <i class="fa-solid fa-egg"></i>
-                    </button>
+
+                <div class="row">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Refreshing Lemonade
+                        </div>
+                        <div class="i-d">
+                            (Cucumber, mint, lemonade)
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">159</div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Blue Lady
+                        </div>
+                        <div class="i-d">
+                            (Blueberry,mint,lemonade)
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">179</div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Mickey Mouse
+                        </div>
+                        <div class="i-d">
+                            (Ice-cream,cola)
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">99</div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Spicy Guava
+                        </div>
+                        <div class="i-d">
+                            (Guava,chilly,lemonade)
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">179</div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Minty Watermelon
+                        </div>
+                        <div class="i-d">
+                            (Mint,water,lemonade)
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">189</div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="container lists d-none" id="sandwiches-items">
+                <div class="col-12 menu-header">
+                </div>
+                
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Veg. Mayo Grilled Sandwich
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">139</div>
+                    </div>
+                </div>
+
+
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Veggie Panini Sandwich
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">149</div>
+                    </div>
+                </div>
+
+
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Veggie Cheese Burst Sandwich
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">169</div>
+                    </div>
+                </div>
+
+
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Veg. Triple Decker
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">199</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Pulled Chicken Sandwich
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">179</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Chicken Tikka Sandwich
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">199</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Chicken Triple Decker
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">249</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Chicken Mushroom Panini
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">219</div>
+                    </div>
+                </div>
+
+            </div>
+    
+            <div class="container menu">
+                <div class="row">
+                    <div class="col-6 my-1">
+                        <figure>
+                            <img id="mocktails" src="images/mocktail.jpg" class="img-fluid py-2 images" onclick="list('mocktails')"> 
+                            <figcaption class="figure-caption text-center">Mocktails</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6 my-1">
+                        <figure>
+                            <img id="beverages" src="images/beverages.webp" class="img-fluid py-2 images" onclick="console.log('yay')">
+                            <figcaption class="figure-caption text-center">Beverages</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6 my-1">
+                        <figure>
+                            <img id="fries" src="images/fries.jpg" class="img-fluid py-2 images">
+                            <figcaption class="figure-caption text-center">French Fries</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6 my-1">
+                        <figure>
+                            <img id="sandwiches" src="images/sandwich.jpeg" class="img-fluid py-2 images" onclick="list('sandwiches')">
+                            <figcaption class="figure-caption text-center">Sandwiches</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6 my-1">
+                        <figure>
+                            <img id="garlic" src="images/garlic.jpg" class="img-fluid py-2 images">
+                            <figcaption class="figure-caption text-center">Garlic Breads</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6 my-1">
+                        <figure>
+                            <img id="pizza" src="images/pizza.jpg" class="img-fluid py-2 images">
+                            <figcaption class="figure-caption text-center">Pizzas</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6 my-1">
+                        <figure>
+                            <img id="wraps" src="images/wraps.jpg" class="img-fluid py-2 images">
+                            <figcaption class="figure-caption text-center">Wraps & Rolls</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6 my-1">
+                        <figure>
+                            <img id="pasta" src="images/pasta.jpg" class="img-fluid py-2 images">
+                            <figcaption class="figure-caption text-center">Pasta</figcaption>
+                        </figure>
+                    </div>
                 </div>
             </div>
         </main>

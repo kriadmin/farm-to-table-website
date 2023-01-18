@@ -2,22 +2,37 @@ body{
     background-color: black;
 }
 
+/* latin */
+@font-face {
+  font-family: 'Tangerine';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/tangerine/v17/IurY6Y5j_oScZZow4VOxCZZM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
 /*.col-6{
     height: 300px;
     overflow: hidden;
 }*/
 
 .lists {
-    color: black;
-    background-color: white ;
+    color: white;
+    background-color: #579667 ;
+    margin-bottom: 10px;
+}
+.menu-header{
+    background-color: white;
+    color: #d2ab66
 }
 
 .header{
     height: 15%;
-    background-image: linear-gradient(140deg,#F27B57 40%, #a96f47 60%);
 }
 
 .header-image{
+    min-height: 100%;
     max-height: 100%;
     display: block;
     margin-left: auto;
@@ -31,6 +46,7 @@ body{
 }
 
 .filters{
+    margin-left: 15%;
     margin-top: 30px;
     color:white;
 }
@@ -109,6 +125,27 @@ body{
 }
 
 .lists .row{
-    border-bottom: 1px solid gray;
+    box-shadow: 0px 24px 3px -24px darkgray;
     min-height : 50px;
+}
+
+.footer{
+    background-color: white;
+    color: black;
+    z-index: 5;
+}
+
+
+.footer .container{
+    margin-right: 3%;
+    margin-left: 7%;
+    min-height: 90px;
+}
+
+.footer .container .row div{
+    min-height: 100%;
+}
+
+.container.lists{
+
 }

@@ -59,3 +59,27 @@ list = type => {
     })
     currentIcon = document.getElementById(type).parentElement.parentElement.classList.add("d-none")
 }
+
+retract = () => {
+    allLists = Array.from(document.getElementsByClassName("lists"));
+    allLists.forEach(list => {
+        list.classList.add("d-none");
+    })
+    allIcons = Array.from(document.querySelectorAll(".menu div div"));
+    allIcons.forEach(icon => {
+        icon.classList.remove("d-none");
+    })
+}
+
+loader = () => {
+    /*let items = Array.from(document.getElementsByClassName("item-quantity"));
+    items.forEach(item => {
+        item.style.visibility = "hidden";
+    })*/
+}
+
+addItem = element => {
+    val = parseInt(element.getElementsByClassName("item-quantity")[0].attributes.count.value);
+    val += 1;
+    element.getElementsByClassName("item-quantity")[0].attributes.count.value = val;
+}

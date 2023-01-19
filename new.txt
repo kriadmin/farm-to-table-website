@@ -1,12 +1,12 @@
 
-            <div class="container lists" id="sandwiches-items">
+            <div class="container lists" id="soup-items">
                 <div class="col-12 menu-header">
                 </div>
                 
                 <div class="row veg-item">
                     <div class="col-4 item-name align-self-center">
                         <div class="i-n">
-                            Veg. Mayo Grilled Sandwich
+                            Manchow Soup
                         </div>
                         <div class="i-d">
                             
@@ -23,7 +23,7 @@
                     </div>
                     <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
                         <div class="after-discount item-price d-none"></div>
-                        <div class="before-discount item-price">139</div>
+                        <div class="before-discount item-price">130</div>
                     </div>
                 </div>
 
@@ -31,7 +31,7 @@
                 <div class="row veg-item">
                     <div class="col-4 item-name align-self-center">
                         <div class="i-n">
-                            Veggie Panini Sandwich
+                            Hot & Sour Soup
                         </div>
                         <div class="i-d">
                             
@@ -48,7 +48,7 @@
                     </div>
                     <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
                         <div class="after-discount item-price d-none"></div>
-                        <div class="before-discount item-price">149</div>
+                        <div class="before-discount item-price">130</div>
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@
                 <div class="row veg-item">
                     <div class="col-4 item-name align-self-center">
                         <div class="i-n">
-                            Veggie Cheese Burst Sandwich
+                            Tom-Yum Soup
                         </div>
                         <div class="i-d">
                             
@@ -73,32 +73,7 @@
                     </div>
                     <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
                         <div class="after-discount item-price d-none"></div>
-                        <div class="before-discount item-price">169</div>
-                    </div>
-                </div>
-
-
-                <div class="row veg-item">
-                    <div class="col-4 item-name align-self-center">
-                        <div class="i-n">
-                            Veg. Triple Decker
-                        </div>
-                        <div class="i-d">
-                            
-                        </div>
-                    </div>
-                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
-                        <button class="btn ads">
-                            <i class="fa-solid fa-plus"></i>
-                        </button>
-                        0
-                        <button class="btn ads">
-                            <i class="fa-solid fa-minus"></i>
-                        </button>
-                    </div>
-                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
-                        <div class="after-discount item-price d-none"></div>
-                        <div class="before-discount item-price">199</div>
+                        <div class="before-discount item-price">140</div>
                     </div>
                 </div>
 
@@ -106,7 +81,7 @@
                 <div class="row non-veg-item">
                     <div class="col-4 item-name align-self-center">
                         <div class="i-n">
-                            Pulled Chicken Sandwich
+                            Chicken Manchow Soup 
                         </div>
                         <div class="i-d">
                             
@@ -123,7 +98,7 @@
                     </div>
                     <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
                         <div class="after-discount item-price d-none"></div>
-                        <div class="before-discount item-price">179</div>
+                        <div class="before-discount item-price">150</div>
                     </div>
                 </div>
 
@@ -131,7 +106,7 @@
                 <div class="row non-veg-item">
                     <div class="col-4 item-name align-self-center">
                         <div class="i-n">
-                            Chicken Tikka Sandwich
+                            Chicken Tom-Yum Soup
                         </div>
                         <div class="i-d">
                             
@@ -148,7 +123,7 @@
                     </div>
                     <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
                         <div class="after-discount item-price d-none"></div>
-                        <div class="before-discount item-price">199</div>
+                        <div class="before-discount item-price">150</div>
                     </div>
                 </div>
 
@@ -156,7 +131,7 @@
                 <div class="row non-veg-item">
                     <div class="col-4 item-name align-self-center">
                         <div class="i-n">
-                            Chicken Triple Decker
+                            Spiced Chicken Soup
                         </div>
                         <div class="i-d">
                             
@@ -173,32 +148,7 @@
                     </div>
                     <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
                         <div class="after-discount item-price d-none"></div>
-                        <div class="before-discount item-price">249</div>
-                    </div>
-                </div>
-
-
-                <div class="row non-veg-item">
-                    <div class="col-4 item-name align-self-center">
-                        <div class="i-n">
-                            Chicken Mushroom Panini
-                        </div>
-                        <div class="i-d">
-                            
-                        </div>
-                    </div>
-                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
-                        <button class="btn ads">
-                            <i class="fa-solid fa-plus"></i>
-                        </button>
-                        0
-                        <button class="btn ads">
-                            <i class="fa-solid fa-minus"></i>
-                        </button>
-                    </div>
-                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
-                        <div class="after-discount item-price d-none"></div>
-                        <div class="before-discount item-price">219</div>
+                        <div class="before-discount item-price">150</div>
                     </div>
                 </div>
 

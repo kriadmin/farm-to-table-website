@@ -72,14 +72,40 @@ retract = () => {
 }
 
 loader = () => {
-    /*let items = Array.from(document.getElementsByClassName("item-quantity"));
+    let items = Array.from(document.getElementsByClassName("item-quantity"));
     items.forEach(item => {
         item.style.visibility = "hidden";
-    })*/
+    })
 }
 
 addItem = element => {
     val = parseInt(element.getElementsByClassName("item-quantity")[0].attributes.count.value);
-    val += 1;
-    element.getElementsByClassName("item-quantity")[0].attributes.count.value = val;
+    if (val == 0) {
+        val += 1;
+        el = element.getElementsByClassName("item-quantity")[0]
+        el.attributes.count.value = val;
+        el.innerHTML = el.innerHTML.replace(/\n\s*(\d+)\n/, (a,b) => "\n          " + 1 + "\n");
+        el.style.visibility = "";
+    }
+}
+
+removeItem = element => {
+    el = element.parentElement;
+    val = parseInt(el.attributes.count.value);
+    if (val != 1) {
+        val -= 1;
+        el.attributes.count.value = val;
+        el.innerHTML = el.innerHTML.replace(/\n\s*(\d+)\n/, (a,b) => "\n          " + (parseInt(b) - 1) + "\n");
+    }
+    else{
+        val -= 1;
+        el.attributes.count.value = val;
+        el.innerHTML = el.innerHTML.replace(/\n\s*(\d+)\n/, (a,b) => "\n          " + (parseInt(b) - 1) + "\n");
+        el.style.visibility = "hidden";
+        console.log(el)
+    }
+}
+
+pay = () => {
+    window.location = "upi://pay?pa=digipeispl@icici&pn=FarmToTable&tr=MNO8733029901&am=159&cu=INR&mc=5411";
 }

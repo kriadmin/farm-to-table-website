@@ -4,7 +4,7 @@ import pandas as pd
 
 
 minn = """
-            <div class="container lists" id="sandwiches-items">
+            <div class="container lists" id="soup-items">
                 <div class="col-12 menu-header">
                 </div>
                 {content}
@@ -36,13 +36,14 @@ repeated = """
                 </div>
 """
 arr = []
-a = pd.read_csv("sandwiches.csv")
+a = pd.read_csv("soup.csv")
 for row in a.iterrows():
-    a = str(row[1]["Unnamed: 0"])
-    x = str(row[1]['Unnamed: 1'])
-    y = str(row[1]["Unnamed: 2"])
-    z = str(row[1]["Unnamed: 3"])
+    a = str(row[1]["name "])
+    x = str(row[1]['decription'])
+    y = str(row[1]["type"])
+    z = str(row[1]["price"])
     x = x if x!="nan" else ""
+    y = "veg-item" if y == "veg" else "non-veg-item"
     arr.append(repeated.format(type=y,name=a,desc=x,price=z))
 
 with open("new.txt","w") as f:

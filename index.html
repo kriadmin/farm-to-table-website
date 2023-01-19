@@ -17,6 +17,7 @@
                     Menu
                 </div>
             </div>
+
             <div class="d-flex justify-content-begin filters mt-3">
 
                 <div class="p-2 filter">
@@ -53,11 +54,11 @@
                         </div>
                     </div>
                     <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
-                        <button class="btn ads">
+                        <button class="btn ads" onclick="addItem(this)">
                             <i class="fa-solid fa-plus"></i>
                         </button>
-                        <p>0</p>
-                        <button class="btn ads">
+                        0
+                        <button class="btn ads" onclick="removeItem(this)">
                             <i class="fa-solid fa-minus"></i>
                         </button>
                     </div>
@@ -399,6 +400,942 @@
                 </div>
 
             </div>
+
+            <div class="container lists d-none" id="pasta-items">
+                <div class="col-12 menu-header" style="font-family: Tangerine; font-size: 90px;" onclick="retract()">
+                    Pasta
+                </div>
+                
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Mac & Cheese Pasta
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">320</div>
+                    </div>
+                </div>
+
+
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Arrabiata Pasta 
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">280</div>
+                    </div>
+                </div>
+
+
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Alfredo Pasta 
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">290</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Chicken Mac & Cheese Pasta
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">350</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Chicken Pink Sauce Pasta
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">360</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Chicken Aglio Olio Pasta 
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">450</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container lists d-none" id="wraps-items">
+                <div class="col-12 menu-header" style="font-family: Tangerine; font-size: 90px;" onclick="retract()">
+                    Wraps & Rolls
+                </div>
+                
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Crispy Paneer Wrap
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">250</div>
+                    </div>
+                </div>
+
+
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Jamaican Veggie Roll
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">240</div>
+                    </div>
+                </div>
+
+
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Peri Peri Paneer Wrap
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">280</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Jamaican Chicken Wrap
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">360</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Fish Wrap
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">390</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Egg Wrap
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">200</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container lists d-none" id="fries-items">
+                <div class="col-12 menu-header" style="font-family: Tangerine; font-size: 90px;" onclick="retract()">
+                    French Fries
+                </div>
+                
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Salted French Fries 
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">140</div>
+                    </div>
+                </div>
+
+
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Peri Peri French Fries 
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">170</div>
+                    </div>
+                </div>
+
+
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Jamaican French Fries 
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">180</div>
+                    </div>
+                </div>
+
+
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Cheesy French Fries 
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">230</div>
+                    </div>
+                </div>
+
+
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Herb Garlic French Fries 
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">180</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Crispy Chicken Stripes 
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">300</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container lists d-none" id="garlic-items">
+                <div class="col-12 menu-header" style="font-family: Tangerine; font-size: 90px;" onclick="retract()">
+                    Garlic Breads
+                </div>
+                
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Cheese Burst 
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">270</div>
+                    </div>
+                </div>
+
+
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Paneer Tikka 
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">280</div>
+                    </div>
+                </div>
+
+
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Bruschetta 
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">250</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Cheesy Chicken Garlic Bread 
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">280</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Chicken Tikka 
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">300</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Chicken & Mushroom 
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">300</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container lists d-none" id="pizza-items">
+                <div class="col-12 menu-header" style="font-family: Tangerine; font-size: 90px;" onclick="retract()">
+                    Mocktails
+                </div>
+                
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Margarita 
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">450</div>
+                    </div>
+                </div>
+
+
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Paneer Tikka
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">650</div>
+                    </div>
+                </div>
+
+
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Hell & Heaven
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">650</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Butter Chicken
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">620</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Chicken Bonanza
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">900</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Flaming Chicken 
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">620</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container lists d-none" id="soup-items">
+                <div class="col-12 menu-header" style="font-family: Tangerine; font-size: 90px;" onclick="retract()">
+                    Soups
+                </div>
+                
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Manchow Soup
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">130</div>
+                    </div>
+                </div>
+
+
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Hot & Sour Soup
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">130</div>
+                    </div>
+                </div>
+
+
+                <div class="row veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Tom-Yum Soup
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">140</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Chicken Manchow Soup 
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">150</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Chicken Tom-Yum Soup
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">150</div>
+                    </div>
+                </div>
+
+
+                <div class="row non-veg-item">
+                    <div class="col-4 item-name align-self-center">
+                        <div class="i-n">
+                            Spiced Chicken Soup
+                        </div>
+                        <div class="i-d">
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 item-quantity d-flex justify-content-end align-self-center" count="0">
+                        <button class="btn ads">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        0
+                        <button class="btn ads">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="col-5 item-prices d-flex justify-content-end align-self-center" discount="0">
+                        <div class="after-discount item-price d-none"></div>
+                        <div class="before-discount item-price">150</div>
+                    </div>
+                </div>
+
+            </div>
     
             <div class="container menu">
                 <div class="row">
@@ -410,13 +1347,13 @@
                     </div>
                     <div class="col-6 my-1">
                         <figure>
-                            <img id="beverages" src="images/beverages.webp" class="img-fluid py-2 images" onclick="console.log('yay')">
-                            <figcaption class="figure-caption text-center">Beverages</figcaption>
+                            <img id="soup" src="images/soup.jpeg" class="img-fluid py-2 images" onclick="list('soup')">
+                            <figcaption class="figure-caption text-center">Soups</figcaption>
                         </figure>
                     </div>
                     <div class="col-6 my-1">
                         <figure>
-                            <img id="fries" src="images/fries.jpg" class="img-fluid py-2 images">
+                            <img id="fries" src="images/fries.jpg" class="img-fluid py-2 images" onclick='list("fries")'>
                             <figcaption class="figure-caption text-center">French Fries</figcaption>
                         </figure>
                     </div>
@@ -428,25 +1365,25 @@
                     </div>
                     <div class="col-6 my-1">
                         <figure>
-                            <img id="garlic" src="images/garlic.jpg" class="img-fluid py-2 images">
+                            <img id="garlic" src="images/garlic.jpg" class="img-fluid py-2 images" onclick='list("garlic")'>
                             <figcaption class="figure-caption text-center">Garlic Breads</figcaption>
                         </figure>
                     </div>
                     <div class="col-6 my-1">
                         <figure>
-                            <img id="pizza" src="images/pizza.jpg" class="img-fluid py-2 images">
+                            <img id="pizza" src="images/pizza.jpg" class="img-fluid py-2 images" onclick="list('pizza')">
                             <figcaption class="figure-caption text-center">Pizzas</figcaption>
                         </figure>
                     </div>
                     <div class="col-6 my-1">
                         <figure>
-                            <img id="wraps" src="images/wraps.jpg" class="img-fluid py-2 images">
+                            <img id="wraps" src="images/wraps.jpg" class="img-fluid py-2 images" onclick='list("wraps")'>
                             <figcaption class="figure-caption text-center">Wraps & Rolls</figcaption>
                         </figure>
                     </div>
                     <div class="col-6 my-1">
                         <figure>
-                            <img id="pasta" src="images/pasta.jpg" class="img-fluid py-2 images">
+                            <img id="pasta" src="images/pasta.jpg" class="img-fluid py-2 images" onclick='list("pasta")'>
                             <figcaption class="figure-caption text-center">Pasta</figcaption>
                         </figure>
                     </div>
@@ -457,10 +1394,10 @@
             <div class="container">
                 <div class="row align-items-center py-3">
                     <div class="col-9 d-flex justify-content-begin" style="font-size: 40px;">
-                        <b>Amount: </b> &#x20B9; 200
+                        <b>Amount: </b> &#x20B9; 159
                     </div>
                     <div class="col-3 d-flex justify-content-end">
-                        <button class="btn btn-primary btn-lg">
+                        <button class="btn btn-primary btn-lg" onclick="pay()">
                             Pay Now
                         </button>
                     </div>
